@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from 'react'
+import React, { useEffect,  useState ,useLayoutEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {getGallaryDetails} from '../Actions/gallaryActions'
 import GallaryList from './GallaryList'
@@ -9,7 +9,7 @@ const GallaryContainer=()=>{
    
     const dispatch=useDispatch()
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
        dispatch(getGallaryDetails()) 
     },[dispatch])
 

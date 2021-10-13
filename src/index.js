@@ -7,11 +7,6 @@ import './App.css'
 
 const store=configureStore()
 
-console.log("Before Update",store.getState())
-
-store.subscribe(()=>{
-  console.log("After Update",store.getState())
-})
 
 ReactDOM.render(
   <React.StrictMode>
